@@ -1,0 +1,6 @@
+
+.vscode/
+figures/
+
+*.log
+*.synctex
