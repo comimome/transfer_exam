@@ -38,8 +38,8 @@
 球面 $\mathrm{\beta}$ が球面 $\mathrm{\alpha}$ と共有点を持つ条件は問1より以下のようになる．
 
 \begin{align*}
-  \lvert\overrightarrow{\mathrm{AB}}\lvert \ge \mathrm{r} \ge \lvert\overrightarrow{\mathrm{AB}}\lvert - \lvert\overrightarrow{\mathrm{AC}}\lvert \\
-  \sqrt{10} \ge \mathrm{r} \ge \sqrt{10} - 1
+  \lvert\overrightarrow{\mathrm{AB}}\lvert + \lvert\overrightarrow{\mathrm{AC}}\lvert  \ge \mathrm{r} \ge \lvert\overrightarrow{\mathrm{AB}}\lvert - \lvert\overrightarrow{\mathrm{AC}}\lvert \\
+  \sqrt{10} + 1 \ge \mathrm{r} \ge \sqrt{10} - 1
 \end{align*}
 
 
@@ -60,6 +60,37 @@
   \fill [black](F) node [above]{F};
 \end{tikzpicture}
 
+円 $\mathrm{S}$ は $\lvert\mathrm{DF}\lvert$ を半径に持つため，
+
+\begin{align*}
+  {\lvert\mathrm{DF}\lvert}^2\pi = \frac{5\pi}{9} \\
+  {\lvert\mathrm{DF}\lvert}^2 = \frac{5}{9}
+\end{align*}
+
+となる．また図から次のような関係が成り立つ．
+
+\begin{align*}
+  {\lvert\mathrm{AD}\lvert}^2 = {\lvert\mathrm{AF}\lvert}^2 + {\lvert\mathrm{DF}\lvert}^2 \\
+  {\lvert\mathrm{BD}\lvert}^2 = {\lvert\mathrm{BF}\lvert}^2 + {\lvert\mathrm{DF}\lvert}^2
+\end{align*}
+
+$\lvert\mathrm{AD}\lvert = 1$，$\lvert\mathrm{BD}\lvert = \mathrm{r}$，
+$\lvert\mathrm{BF}\lvert = \lvert\mathrm{AB}\lvert - \lvert\mathrm{AF}\lvert = \sqrt{10} - \lvert\mathrm{AF}\lvert$
+であるため，上2式は次のようになる．
+
+\begin{align*}
+  1 = {\lvert\mathrm{AF}\lvert}^2 + \frac{5}{9} \\
+  {\mathrm{r}}^2 = \{\sqrt{10} - \lvert\mathrm{AF}\lvert\}^2 + \frac{5}{9}
+\end{align*}
+
+整理すると
+
+\begin{align*}
+  {\mathrm{r}}^2 = \{\sqrt{10} - \sqrt{1 - \frac{5}{9}}\}^2 + \frac{5}{9} = 11 - \frac{4\sqrt{10}}{3} \\
+  \mathrm{r} = \sqrt{11 - \frac{4\sqrt{10}}{3}}
+\end{align*}
+
+となる．
 
 \subsubsection{}
 
