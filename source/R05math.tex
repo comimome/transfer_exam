@@ -1,20 +1,28 @@
 \section{令和５年度 数学}
 
+
 \subsection{}
 
+
 \subsubsection{}
+
 ベクトル $\overrightarrow{\mathrm{AB}}$ を求め，その大きさを計算する．$\overrightarrow{\mathrm{AB}}$ は
+
 \begin{align*}
   \overrightarrow{\mathrm{AB}} = \begin{pmatrix}4 \\ 5 \\ -2 \end{pmatrix} - \begin{pmatrix}2 \\ 3 \\ -1 \end{pmatrix} = \begin{pmatrix}2 \\ 2 \\ -1 \end{pmatrix}
 \end{align*}
+
 となる．よって
+
 \begin{align*}
   \lvert\overrightarrow{\mathrm{AB}}\lvert = \sqrt{2^2 + 2^2 + (-1)^2} = \sqrt{10}
 \end{align*}
+
 である．
 
 
 \subsubsection{}
+
 \begin{tikzpicture}
   \coordinate (A) at (2,3,-1) node [below left] at (A) {A};
   \coordinate (B) at (4,5,-2) node [below right] at (B) {B};
@@ -25,6 +33,14 @@
   \fill (C) node [above] {C};
   \foreach\P in {A,B,C} \fill[black](\P)circle(0.06);
 \end{tikzpicture}
+
+線分 $\mathrm{AB}$ と球面 $\mathrm{\alpha}$ の交点を $\mathrm{C}$ とおく．
+球面 $\mathrm{\beta}$ が球面 $\mathrm{\alpha}$ と共有点を持つ条件は問1より以下のようになる．
+
+\begin{align*}
+  \lvert\overrightarrow{\mathrm{AB}}\lvert \ge \mathrm{r} \ge \lvert\overrightarrow{\mathrm{AB}}\lvert - \lvert\overrightarrow{\mathrm{AC}}\lvert \\
+  \sqrt{10} \ge \mathrm{r} \ge \sqrt{10} - 1
+\end{align*}
 
 
 \subsubsection{}
