@@ -44,6 +44,23 @@
 
 
 \subsubsection{}
+
+\begin{tikzpicture}
+  \coordinate (A) at (2,3,-1) node [below left] at (A) {A};
+  \coordinate (B) at (4,5,-2) node [below right] at (B) {B};
+  \draw [name path=AB][thick](A)--(B);
+  \draw [name path=cir_A][thick](A) circle[radius=1];
+  \draw [name path=cir_B][thick](B) circle[radius=3];
+  \path[name intersections={of=cir_A and cir_B, by={D, E}}];
+  \fill [black](D) node [above right]{D};
+  \fill [black](E) node [above right]{E};
+  \draw [name path=DE][thick][dotted](D)--(E);
+  \path [name intersections={of=AB and DE, by={F}}];
+  \foreach\P in {A,B,D,E,F}\fill[black](\P)circle(0.06);
+  \fill [black](F) node [above]{F};
+\end{tikzpicture}
+
+
 \subsubsection{}
 
 \subsection{}
