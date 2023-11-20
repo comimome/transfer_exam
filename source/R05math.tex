@@ -15,6 +15,18 @@
 
 
 \subsubsection{}
+\begin{tikzpicture}
+  \coordinate (A) at (2,3,-1) node [below left] at (A) {A};
+  \coordinate (B) at (4,5,-2) node [below right] at (B) {B};
+  \draw [name path=AB][thick](A)--(B);
+  \draw [name path=cir_A][thick](A) circle[radius=1];
+  \draw [name path=cir_B][thick][dotted](B) circle[radius=3];
+  \path [name intersections={of=AB and cir_A, by={C}}];
+  \fill (C) node [above] {C};
+  \foreach\P in {A,B,C} \fill[black](\P)circle(0.06);
+\end{tikzpicture}
+
+
 \subsubsection{}
 \subsubsection{}
 
