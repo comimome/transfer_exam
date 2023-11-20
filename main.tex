@@ -1,6 +1,30 @@
 \documentclass[10pt]{jsarticle}
 
-\usepackage{url}
+%% パッケージ
+\usepackage{titlesec} % sectionの見た目を編集
+\usepackage{color} % 文字・背景の色を編集
+\usepackage{url} % URLを出力
+
+%% sectionの修飾
+% 四角＋下線
+\titleformat{\section}[block]
+{}{}{0pt}
+{
+  \colorbox{black}{\begin{picture}(0,10)\end{picture}}
+  \hspace{0pt}
+  \normalfont \Large\bfseries
+  \hspace{-4pt}
+}
+[
+\begin{picture}(100,0)
+  \put(3,18){\color{black}\line(1,0){300}}
+\end{picture}
+\\
+\vspace{-30pt}
+]
+\renewcommand{\thesubsection}{\textbf{大問\arabic{subsection}}}
+\renewcommand{\thesubsubsection}{\textbf{(\arabic{subsubsection})}}
+
 
 \setcounter{tocdepth}{3}
 \begin{document}
@@ -15,5 +39,8 @@
 
 \section{はじめに}
 
+\newpage
+
+\input{source/R05math.tex}
 
 \end{document}
