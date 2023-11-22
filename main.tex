@@ -1,6 +1,35 @@
 \documentclass[10pt]{jsarticle}
 
-\usepackage{url}
+%% パッケージ
+\usepackage{titlesec} % sectionの見た目を編集
+\usepackage{color} % 文字・背景の色を編集
+\usepackage{url} % URLを出力
+\usepackage{amsmath,amssymb} % 数式全般
+\usepackage{mathtools}
+\usepackage[dvipdfmx]{graphicx} % 図の挿入
+\usepackage{tikz} % 図の描画
+\usetikzlibrary{intersections,calc,arrows.meta} % TikZのライブラリを追加
+
+%% sectionの修飾
+% 四角＋下線
+\titleformat{\section}[block]
+{}{}{0pt}
+{
+  \colorbox{black}{\begin{picture}(0,10)\end{picture}}
+  \hspace{0pt}
+  \normalfont \Large\bfseries
+  \hspace{-4pt}
+}
+[
+\begin{picture}(100,0)
+  \put(3,18){\color{black}\line(1,0){300}}
+\end{picture}
+\\
+\vspace{-30pt}
+]
+\renewcommand{\thesubsection}{\textbf{問題\Roman{subsection}}}
+\renewcommand{\thesubsubsection}{\textbf{問\arabic{subsubsection}}}
+
 
 \setcounter{tocdepth}{3}
 \begin{document}
@@ -15,5 +44,8 @@
 
 \section{はじめに}
 
+\newpage
+
+\input{source/R05math.tex}
 
 \end{document}

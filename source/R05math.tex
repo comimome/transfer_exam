@@ -1,0 +1,125 @@
+\section{令和５年度 数学}
+
+
+\subsection{}
+
+
+\subsubsection{}
+
+ベクトル $\overrightarrow{\mathrm{AB}}$ を求め，その大きさを計算する．$\overrightarrow{\mathrm{AB}}$ は
+
+\begin{gather*}
+  \overrightarrow{\mathrm{AB}} = \begin{pmatrix}4 \\ 5 \\ -2 \end{pmatrix} - \begin{pmatrix}2 \\ 3 \\ -1 \end{pmatrix} = \begin{pmatrix}2 \\ 2 \\ -1 \end{pmatrix}
+\end{gather*}
+
+となる．よって
+
+\begin{gather*}
+  \lvert\overrightarrow{\mathrm{AB}}\lvert = \sqrt{2^2 + 2^2 + (-1)^2} = \sqrt{9} = 3
+\end{gather*}
+
+である．
+
+
+\subsubsection{}
+
+\begin{tikzpicture}
+  \coordinate (A) at (2,3,-1) node [below left] at (A) {A};
+  \coordinate (B) at (4,5,-2) node [below right] at (B) {B};
+  \draw [name path=AB][thick](A)--(B);
+  \draw [name path=cir_A][thick](A) circle[radius=1];
+  \draw [name path=cir_B][thick][dotted](B) circle[radius=3];
+  \path [name intersections={of=AB and cir_A, by={C}}];
+  \fill (C) node [above] {C};
+  \foreach\P in {A,B,C} \fill[black](\P)circle(0.06);
+\end{tikzpicture}
+
+線分 $\mathrm{AB}$ と球面 $\mathrm{\alpha}$ の交点を $\mathrm{C}$ とおく．
+球面 $\mathrm{\beta}$ が球面 $\mathrm{\alpha}$ と共有点を持つ条件は問1より以下のようになる．
+
+\begin{gather*}
+  \lvert\overrightarrow{\mathrm{AB}}\lvert + \lvert\overrightarrow{\mathrm{AC}}\lvert  \ge \mathrm{r} \ge \lvert\overrightarrow{\mathrm{AB}}\lvert - \lvert\overrightarrow{\mathrm{AC}}\lvert \\
+  3 \ge \mathrm{r} \ge 2
+\end{gather*}
+
+
+\subsubsection{}
+
+\begin{tikzpicture}
+  \coordinate (A) at (2,3,-1) node [below left] at (A) {A};
+  \coordinate (B) at (4,5,-2) node [below right] at (B) {B};
+  \draw [name path=AB][thick](A)--(B);
+  \draw [name path=cir_A][thick](A) circle[radius=1];
+  \draw [name path=cir_B][thick](B) circle[radius=3];
+  \path[name intersections={of=cir_A and cir_B, by={D, E}}];
+  \fill [black](D) node [above right]{D};
+  \fill [black](E) node [above right]{E};
+  \draw [name path=DE][thick][dotted](D)--(E);
+  \path [name intersections={of=AB and DE, by={F}}];
+  \foreach\P in {A,B,D,E,F}\fill[black](\P)circle(0.06);
+  \fill [black](F) node [above]{F};
+\end{tikzpicture}
+
+円 $\mathrm{S}$ は $\lvert\mathrm{DF}\lvert$ を半径に持つため，
+
+\begin{gather*}
+  {\lvert\mathrm{DF}\lvert}^2\pi = \frac{5\pi}{9} \\
+  {\lvert\mathrm{DF}\lvert}^2 = \frac{5}{9}
+\end{gather*}
+
+となる．また図から次のような関係が成り立つ．
+
+\begin{gather*}
+  {\lvert\mathrm{AD}\lvert}^2 = {\lvert\mathrm{AF}\lvert}^2 + {\lvert\mathrm{DF}\lvert}^2 \\
+  {\lvert\mathrm{BD}\lvert}^2 = {\lvert\mathrm{BF}\lvert}^2 + {\lvert\mathrm{DF}\lvert}^2
+\end{gather*}
+
+$\lvert\mathrm{AD}\lvert = 1$，$\lvert\mathrm{BD}\lvert = \mathrm{r}$，
+$\lvert\mathrm{BF}\lvert = \lvert\mathrm{AB}\lvert - \lvert\mathrm{AF}\lvert = \sqrt{10} - \lvert\mathrm{AF}\lvert$
+であるため，上2式は次のようになる．
+
+\begin{gather*}
+  1 = {\lvert\mathrm{AF}\lvert}^2 + \frac{5}{9} \\
+  {\mathrm{r}}^2 = \left\{3 - \lvert\mathrm{AF}\lvert\right\}^2 + \frac{5}{9}
+\end{gather*}
+
+整理すると
+
+\begin{gather*}
+  {\mathrm{r}}^2 = \left\{3 - \sqrt{1 - \frac{5}{9}}\right\}^2 + \frac{5}{9} = 6 \\
+  \mathrm{r} = \sqrt{6}
+\end{gather*}
+
+となる．
+
+\subsubsection{}
+
+円 $\mathrm{S}$ の中心座標は点 $\mathrm{F}$，
+円 $\mathrm{S}$ を含む平面の方程式の法線ベクトルはベクトル 
+$\overrightarrow{\mathrm{AB}}$ に等しい．
+問3から点 $\mathrm{F}$ は線分 $\mathrm{AB}$ を $2\colon7$ に内分する点であるため，点 $\mathrm{F}$ の座標は，
+
+\begin{gather*}
+  \left\lparen {\frac{7 \cdot 2 + 2 \cdot 4}{9}} {,}
+  {\frac{7 \cdot 3 + 2 \cdot 5}{9}} {,}
+  {\frac{7 \cdot (-1) + 2 \cdot (-2)}{9}} \right\rparen
+  =\left\lparen {\frac{22}{9}} {,}
+  {\frac{31}{9}} {,}
+  {\frac{-11}{9}} \right\rparen
+\end{gather*}
+
+となる．また平面の方程式は問1から
+
+\begin{gather*}
+  2 \left\lparen x - \frac{22}{9} \right\rparen +
+  2 \left\lparen y - \frac{31}{9} \right\rparen -
+  \left\lparen z + \frac{11}{9} \right\rparen = 0 \\
+  2 x + 2 y - z - 11 = 0
+\end{gather*}
+
+となる．
+
+
+\subsection{}
+
+\subsection{}
