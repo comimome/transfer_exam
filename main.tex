@@ -7,12 +7,13 @@
 \usepackage{amsmath,amssymb} % 数式全般
 \usepackage{mathtools}
 \usepackage[dvipdfmx]{graphicx} % 図の挿入
+\usepackage{pgfplots}
 \usepackage{tikz} % 図の描画
 \usetikzlibrary{intersections,calc,arrows.meta} % TikZのライブラリを追加
 
 %% sectionの修飾
 % 四角＋下線
-\titleformat{\section}[block]
+\titleformat{\part}[block]
 {}{}{0pt}
 {
   \colorbox{black}{\begin{picture}(0,10)\end{picture}}
@@ -27,8 +28,9 @@
 \\
 \vspace{-30pt}
 ]
-\renewcommand{\thesubsection}{\textbf{問題\Roman{subsection}}}
-\renewcommand{\thesubsubsection}{\textbf{問\arabic{subsubsection}}}
+\renewcommand{\thesection}{\textbf{問題\Roman{section}}}
+\renewcommand{\thesubsection}{\textbf{問\arabic{subsection}}}
+\renewcommand{\thesubsubsection}{\textbf{(\alph{subsubsection})}}
 
 
 \setcounter{tocdepth}{3}
@@ -42,7 +44,7 @@
 \tableofcontents%目次
 \newpage
 
-\section{はじめに}
+\part{はじめに}
 
 \newpage
 
