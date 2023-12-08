@@ -155,5 +155,39 @@ $\overrightarrow{\mathrm{AB}}$ に等しい．
 
 まず関数$f(x)$を微分する．
 
+\begin{gather*}
+  y = \dv{x} f(x) = \frac{1}{\sqrt{1-x^2}} - \frac{2x}{\sqrt{1-x^2}} = \frac{1-2x}{\sqrt{1-x^2}}
+\end{gather*}
+
+$y=0$のとき関数$f(x)$は極値をとる．したがって$x=\frac{1}{2}$のとき，
+
+\begin{gather*}
+  f(x=\frac{1}{2}) = \arcsin \frac{1}{2} + 2 \sqrt{1-\frac{1}{2^2}}
+  = \frac{\pi}{6} + \sqrt{3}
+\end{gather*}
+
+である．また，$x=-1$，$x=1$のとき関数$f(x)$は
+
+\begin{gather*}
+  f(x=-1) = \arcsin \lparen -1 \rparen + 2 \sqrt{1-1} = - \frac{\pi}{2} \\
+  f(x=1) = \arcsin 1 + 2 \sqrt{1-1} = \frac{\pi}{2}
+\end{gather*}
+
+となる．これより増減表は次のようになる．
+
+\begin{center}
+  \begin{tabular}{|c||ccccc|}
+    \hline
+    $x$ & -1 & $\cdots$ & $\frac{1}{2}$ & $\cdots$ & $1$ \\
+    \hline
+    $f'(x)$ &  & $+$ & $0$ & $-$ & \\
+    \hline
+    $f(x)$ & $-\frac{\pi}{2}$ & $\nearrow$ & $\frac{\pi}{6} + \sqrt{3}$ & $\searrow$ & $\frac{\pi}{2}$ \\
+    \hline
+  \end{tabular}
+\end{center}
+
+したがって最大値は$\frac{\pi}{6} + \sqrt{3}$，最小値は$-\frac{\pi}{2}$である．
+
 
 \section{}
