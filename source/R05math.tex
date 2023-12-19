@@ -190,4 +190,52 @@ $y=0$のとき関数$f(x)$は極値をとる．したがって$x=\frac{1}{2}$の
 したがって最大値は$\frac{\pi}{6} + \sqrt{3}$，最小値は$-\frac{\pi}{2}$である．
 
 
+\subsubsection{}
+
+$y=\dv{x}f(x)$を微分する．
+
+\begin{gather*}
+  \dv{y}{x} = \frac{-2\sqrt{1-x^2}+\lparen 1-2x \rparen \frac{x}{\sqrt{1-x^2}}}{1-x^2}
+  = \frac{-2 \lparen 1-x^2 \rparen + \lparen 1-2x \rparen x}{\lparen 1-x^2 \rparen \sqrt{1-x^2}}
+  = \frac{x - 2}{\lparen 1-x^2 \rparen \sqrt{1-x^2}}
+\end{gather*}
+
+これより$y$は$-1 < x < 1$において極値を取らず，
+$\dv{y}{x} < 0$が成り立つため$y$は単調減少．
+
+
+\subsubsection{}
+
+\begin{tikzpicture}
+  \begin{axis}[domain = -1:1, samples=500, axis lines*=middle, xtick={-1,1/2,1}]
+    \addplot[color = black] {(1-2*x)/(sqrt(1-x^2))};
+  \end{axis}
+\end{tikzpicture}
+
+
+\subsection{}
+
+\subsubsection{}
+
+\begin{gather*}
+  \frac{\partial}{\partial y} f(x,y) = \frac{\partial (x \sin (xy) )}{\partial y} = x^2 \cos (xy)
+\end{gather*}
+
+から$g(x,y)$は次のようになる．
+
+\begin{gather*}
+  g(x,y) = \left(\frac{\partial}{\partial y} f(x,y)\right)^2 + x^2 f(x,y)^2
+  =x^4 \cos^2(xy) + x^4 \sin^2(xy) = x^4
+\end{gather*}
+
+\subsubsection{}
+
+\begin{gather*}
+  \iint_{D} g(x,y)^{\frac{1}{4}} \sin(xy) dxdy
+  =\int_{0}^{\pi} \int_{1}^{2} x\sin(xy) dydx
+  =\int_{0}^{\pi} \left[\cos(xy)\right]_{y=1}^{y=2} dx
+  =\int_{0}^{\pi} ( \cos 2x - \cos x ) dx
+  =2
+\end{gather*}
+
 \section{}
