@@ -1,0 +1,58 @@
+
+
+%% パッケージ
+\usepackage{titlesec} % sectionの見た目を編集
+\usepackage{color} % 文字・背景の色を編集
+\usepackage{url} % URLを出力
+\usepackage{amsmath,amssymb} % 数式全般
+\usepackage{mathtools}
+\usepackage[italicdiff]{physics}
+\usepackage[dvipdfmx]{graphicx} % 図の挿入
+\usepackage{pgfplots}
+\usepackage{tikz} % 図の描画
+\usetikzlibrary{intersections,calc,arrows.meta} % TikZのライブラリを追加
+
+
+%% sectionの修飾
+% 四角＋下線
+\titleformat{\part}[block]
+{}{}{0pt}
+{
+  \colorbox{black}{\begin{picture}(0,10)\end{picture}}
+  \hspace{0pt}
+  \normalfont \Large\bfseries
+  \hspace{-4pt}
+}
+[
+\begin{picture}(100,0)
+  \put(3,18){\color{black}\line(1,0){300}}
+\end{picture}
+\\
+\vspace{-30pt}
+]
+\renewcommand{\thesection}{\textbf{問題\Roman{section}}}
+\renewcommand{\thesubsection}{\textbf{問\arabic{subsection}}}
+\renewcommand{\thesubsubsection}{\textbf{(\alph{subsubsection})}}
+
+
+% 増減表の矢印
+\newcommand{\nerarrow}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+  \draw[->,>=stealth] (0,0) to[bend right=45] (1,1);
+  \end{tikzpicture}
+  }
+\newcommand{\nelarrow}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,0) to[bend left=45] (1.2,1);
+\end{tikzpicture}
+}
+\newcommand{\selarrow}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,1) to[bend left=45] (1,0);
+\end{tikzpicture}
+}
+\newcommand{\serarrow}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,1) to[bend right=45] (1.2,0);
+\end{tikzpicture}
+}
