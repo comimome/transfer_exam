@@ -10,7 +10,7 @@
 
 ## サポート
 
-加筆・改変の提案や誤植の連絡は本リポジトリ<https://github.com/comimome/transfer_exam>にIssue，もしくはPull requestを立ててください．
+加筆・改変の提案や誤植の連絡は[本リポジトリ](https://github.com/comimome/transfer_exam)にIssue，もしくはPull requestを立ててください．
 
 ## ライセンス
 
