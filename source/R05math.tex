@@ -128,12 +128,12 @@ $\overrightarrow{\mathrm{AB}}$ に等しい．
 
 問題の関数について対数を取り，その極限値を調べる．
 
-\begin{eqnarray*}
-  \lim_{x \to \infty} \log \sqrt[x]{x} &=& \lim_{x \to \infty} \frac{\log x}{x} \\
-  &=& \lim_{x \to \infty} \frac{\frac{1}{x}}{1} \: \lparen \because ロピタルの定理 \rparen \\
-  &=& 0 \\
-  &=& \log 1
-\end{eqnarray*}
+\begin{align*}
+  \lim_{x \to \infty} \log \sqrt[x]{x} &= \lim_{x \to \infty} \frac{\log x}{x} \\
+  &= \lim_{x \to \infty} \frac{\frac{1}{x}}{1} \quad \left( \because ロピタルの定理 \right) \\
+  &= 0 \\
+  &= \log 1
+\end{align*}
 
 したがって極限値は次のようになる．
 
@@ -233,9 +233,41 @@ $\dv{y}{x} < 0$が成り立つため$y$は単調減少．
 \begin{gather*}
   \iint_{D} g(x,y)^{\frac{1}{4}} \sin(xy) dxdy
   =\int_{0}^{\pi} \int_{1}^{2} x\sin(xy) dydx
-  =\int_{0}^{\pi} \left[\cos(xy)\right]_{y=1}^{y=2} dx
-  =\int_{0}^{\pi} ( \cos 2x - \cos x ) dx
-  =2
+  =\int_{0}^{\pi} \left[-\cos(xy)\right]_{y=1}^{y=2} dx
+  =\int_{0}^{\pi} ( \cos x - \cos 2x ) dx
+  =0
 \end{gather*}
 
 \section{}
+
+\subsection{}
+
+\begin{align*}{2}
+  t^{-1} \dv{t} f(t) &= 4 f(t)^2-1 & &\\
+  \frac{1}{4f(t)^2-1}\dv{t} f(t) &= t & &\\
+  \left( \frac{1}{2f(t)-1} - \frac{1}{2f(t)+1}\right) \dv{f(t)}{t} &= 2t & &\\
+  \int \left( \frac{1}{2f(t)-1} - \frac{1}{2f(t)+1}\right) df &= \int 2t dt & &\\
+  \frac{1}{2} \log |2f(t)-1| - \frac{1}{2} \log |2f(t)+1| &= t^2 + \mathrm{C_1} & &\left(\mathrm{C_1}は任意定数\right) \\
+  \log \left| \frac{2f(t)-1}{2f(t)+1} \right| &= 2t^2 + \mathrm{C_2} & &\left(\mathrm{C_2}=2\mathrm{C_1}\right) \\
+  \frac{2f(t)-1}{2f(t)+1} &= \pm e^{(2t^2+\mathrm{C_2})} & &\\
+  \frac{2f(t)-1}{2f(t)+1} &= \pm e^{\mathrm{C_2}}e^{2t^2} & &\\
+  \frac{2f(t)-1}{2f(t)+1} &= \mathrm{C}e^{2t^2} & &\left(\mathrm{C}=\pm e^{\mathrm{C_2}}\right)
+\end{align*}
+
+初期条件$f(0)=1$より$\mathrm{C}$を求める．
+
+\begin{align*}
+  \frac{2-1}{2+1} &= \mathrm{C}\cdot 1 \\
+  \therefore \mathrm{C} &= \frac{1}{3}
+\end{align*}
+
+求めた$\mathrm{C}$を元の式に代入する．
+
+\begin{align*}
+  \frac{2f(t)-1}{2f(t)+1} &= \frac{1}{3} e^{2t^2} \\
+  1 - \frac{2}{2f(t)+1} &= \frac{1}{3} e^{2t^2} \\
+  \frac{2}{2f(t)+1} &= 1 - \frac{1}{3} e^{2t^2} \\
+  2f(t)+1 &= \frac{2}{1 - \frac{1}{3} e^{2t^2}} \\
+  2f(t)+1 &= \frac{6}{3 - e^{2t^2}} \\
+  f(t) &= \frac{3}{3 - e^{2t^2}} - \frac{1}{2} \\
+\end{align*}
